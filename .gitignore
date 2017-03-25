@@ -1,0 +1,20 @@
+# .gitignore for Wordpress Theme
+
+# Ignore everything in the following
+.*
+~*
+nbproject/* # ignores Netbeans config folder
+node_modules/* # ignores Nodejs folder
+img/*
+rlt.css
+screenshot.jpg
+screenshot.png
+style.css.map
+robots.txt
+.editorconfig
+
+# ignore OS generated files
+Thumbs.db
+
+# don't ignore .gitignore
+!.gitignore
