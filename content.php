@@ -17,6 +17,11 @@
 		<div>
 			<!-- add entry meta -->
 		</div>
+		<div><!--featured image -->
+			<a href="<?php the_permalink(); ?>">
+				<?php the_post_thumbnail(); ?>
+			</a>
+		</div>
 		<?php
 		endif; ?>
 	</header>
