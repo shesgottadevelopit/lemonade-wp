@@ -22,7 +22,7 @@ section,
 summary {
 	display: block;
 }
-
+// - media/graphics
 audio,
 canvas,
 progress,
@@ -40,7 +40,18 @@ audio:not([controls]) {
 template {
 	display: none;
 }
+img {
+	border: 0;
+}
 
+svg:not(:root) {
+	overflow: hidden;
+}
+
+figure {
+	margin: 1em 40px;
+}
+// formatting
 a {
 	background-color: transparent;
 }
@@ -76,7 +87,7 @@ mark {
 small {
 	font-size: 80%;
 }
-
+// Prevents sub & sup line height browser discrepancies
 sub,
 sup {
 	font-size: 75%;
@@ -91,18 +102,6 @@ sup {
 
 sub {
 	bottom: -0.25em;
-}
-
-img {
-	border: 0;
-}
-
-svg:not(:root) {
-	overflow: hidden;
-}
-
-figure {
-	margin: 1em 40px;
 }
 
 hr {
@@ -121,7 +120,7 @@ samp {
 	font-family: monospace, monospace;
 	font-size: 1em;
 }
-
+// - form elements
 button,
 input,
 optgroup,
@@ -163,18 +162,18 @@ input::-moz-focus-inner {
 input {
 	line-height: normal;
 }
-
+// Adds the correct box sizing and removes padding in IE 10-
 input[type="checkbox"],
 input[type="radio"] {
 	box-sizing: border-box;
 	padding: 0;
 }
-
+// Corrects the cursor style of increment and decrement buttons in Chrome
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
 	height: auto;
 }
-
+// Removes the inner padding and cancel buttons in Chrome and Safari on macOS
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
 	-webkit-appearance: none;
