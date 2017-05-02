@@ -128,6 +128,11 @@ add_action( 'wp_enqueue_scripts', 'lemonade_fonts' );
 */
 
 /**
+ * Implement the Admin Features
+ */
+//require get_template_directory() . '/admin/custom-admin.php';
+
+/**
  * Implement the Custom Header feature.
  */
 //require get_template_directory() . '/inc/custom-header.php';
