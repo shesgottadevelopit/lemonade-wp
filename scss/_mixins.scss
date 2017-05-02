@@ -1,0 +1,11 @@
+
+// clearfix for floats
+@mixin clearfix {
+  &:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+}
+
+// Usage .floated-item-parent { @include clearfix; }
