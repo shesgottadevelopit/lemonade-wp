@@ -6,9 +6,9 @@ This is a work in progress!
 _I will continue to refine this starter until it fits my general needs._
 
 Theme Directory Structure
-- Singular.php can be used to replace single.php and page.php, reducing the number of pages used in the theme
+- `Singular.php` can be used to replace `single.php` and `page.php`, reducing the number of pages used in the theme
 - Partials contain blocks of reusable code that is called into each template file.
-- Functions.php includes google fonts enqueue scripts
+- `Functions.php` includes google fonts enqueue scripts
 - Components include various template pages that can be added to the theme to enhance and build on the minimal original components
 ---
 
