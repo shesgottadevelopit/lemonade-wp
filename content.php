@@ -37,7 +37,7 @@
 			) );
 			// for links within the page
 			wp_link_pages( array(
-				'before' => '<div>' . esc_html__( 'Pages:', 'lemonade' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'lemonade' ),
 				'after'  => '</div>',
 			) );
 		?>
