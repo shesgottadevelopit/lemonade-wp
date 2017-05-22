@@ -13,7 +13,7 @@ get_header(); ?>
 
 			<header class="page-header">
 				<?php
-					the_archive_title( '<h1>', '</h1>' );
+					the_archive_title( '<h2>', '</h2>' );
 					the_archive_description( '<div>', '</div>' );
 				?>
 			</header>
@@ -23,7 +23,7 @@ get_header(); ?>
 			// insert navigation or pagination
 			the_posts_navigation();
 		else :
-			get_template_part( 'template-parts/content', 'none' );
+			get_template_part( 'content', 'none' );
 		endif; ?>
 </main>
 <?php

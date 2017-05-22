@@ -93,8 +93,8 @@ function lemonade_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'lemonade' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 }
 add_action( 'widgets_init', 'lemonade_widgets_init' );
@@ -124,35 +124,31 @@ function lemonade_fonts() {
 }
 add_action( 'wp_enqueue_scripts', 'lemonade_fonts' );
 
-/** uncomment below for custom features
-*/
+/** uncomment below for custom features **/
 
 /**
- * Implement the Admin Features
+ * Implement core theme functions
  */
-//require get_template_directory() . '/admin/custom-admin.php';
+//require get_template_directory() . '/inc/theme-functions.php';
 
 /**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
+ * Implement theme template tags
  */
 //require get_template_directory() . '/inc/template-tags.php';
 
 /**
- * Custom functions that act independently of the theme templates.
+ * Implement the Custom Header & Customizer features.
  */
-//require get_template_directory() . '/inc/extras.php';
-
-/**
- * Customizer additions.
- */
+//require get_template_directory() . '/inc/custom-header.php';
 //require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
  */
 //require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Implement the Admin Features
+ */
+//require get_template_directory() . '/admin/custom-admin.php';
+

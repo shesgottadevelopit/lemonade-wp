@@ -11,15 +11,15 @@ get_header(); ?>
 		if ( have_posts() ) : ?>
 
 			<header>
-				<h1><?php printf( esc_html__( 'Search Results for: %s', 'lemonade' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h2><?php printf( esc_html__( 'Search Results for: %s', 'lemonade' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
 			</header>
 			<?php while ( have_posts() ) : the_post();
-			get_template_part( 'template-parts/content', 'search' );
+			get_template_part( 'content', 'search' );
 			endwhile;
 			//navigation
-			the_posts_navigation(); //get_template_part( 'partials/posts-pagination' );
+			the_posts_navigation(); 
 		else :
-			get_template_part( 'template-parts/content', 'none' );
+			get_template_part( 'content', 'none' );
 		endif; ?>
 </main>
 <?php

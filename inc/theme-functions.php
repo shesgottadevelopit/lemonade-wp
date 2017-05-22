@@ -3,13 +3,81 @@
  * Theme-specific functions, toggle comments to activate
  * @package lemonade
  */
-
 /**
- * Custom pagination function outputs number of pages within navigation loop
- * Page X of Y
- * Can be added to a partial 
+ * Custom Lemonade Pagination
+ * This version uses components of existing Wordpress hooks to create custom pagination 
  */
 function lemonade_pagination() {
+	global $wp_query;
+	
+	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
+		return;
+	}
+
+	$big = 999999999; // need an unlikely integer
+
+	echo paginate_links(array(
+		'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+		'format' => '?paged=%#%',
+		'current' => max(1, get_query_var('paged')),
+		'total' => $wp_query->max_num_pages,
+		'show_all' => false,
+		'prev_next' => true,
+		'prev_text' => __('&laquo; Previous'),
+		'next_text' => __('Next &raquo;'),
+		'end_size' => 1,
+		'mid_size' => 2,
+		'type' => 'plain',
+		'before_page_number' => '<span class="page-numbs">',
+		'after_page_number' => '</span>'
+	));
+}
+
+function lemonade_pagination_full() {
+	global $wp_query;
+	
+	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
+		return;
+	}
+
+	$big = 999999999; // need an unlikely integer
+	$current_page = max(1, get_query_var('paged'));
+	$pages = $wp_query->max_num_pages;
+
+	$links = paginate_links(array(
+		'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+		'format' => '?paged=%#%',
+		'current' => max(1, get_query_var('paged')),
+		'total' => $wp_query->max_num_pages,
+		'show_all' => false,
+		'prev_next' => true,
+		'prev_text' => __('&laquo; Previous'),
+		'next_text' => __('Next &raquo;'),
+		'end_size' => 1,
+		'mid_size' => 2,
+		'type' => 'plain',
+		'before_page_number' => '<span class="love">',
+		'after_page_number' => '</span>'
+	));
+	
+	if ( $links ) :
+		?>
+	<nav role="navigation">
+		<h4 class="screen-reader-text"><?php _e( 'Posts navigation', 'lemonade' ); ?></h4>
+		<?php
+		printf(__('<span class="nav-links-pre">Page %s of %s</span>', 'lemonade'), $current_page, $pages);
+		echo $links; ?>
+	</nav>
+	<?php
+	endif;
+}
+
+
+/**
+ * Custom Lemonade Pagination
+ * This version styles the entire block of pagination code
+ */
+function lemonade_pagination_custom() {
 	global $wp_query;
 
 	$current_page = max( 1, get_query_var('paged') );
