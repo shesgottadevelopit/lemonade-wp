@@ -16,6 +16,9 @@
 		if ( 'post' === get_post_type() ) : ?>
 		<div>
 			<!-- add entry meta -->
+			<?php echo get_the_date('l // F j, Y'); ?>
+			<?php echo get_the_tag_list('<span>', '</span></span>', '</span>'); ?>
+			<?php the_category(' | '); ?>|
 		</div>
 		<div><!--featured image -->
 			<a href="<?php the_permalink(); ?>">
