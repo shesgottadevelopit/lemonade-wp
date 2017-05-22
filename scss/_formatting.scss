@@ -10,7 +10,7 @@ html {
 }
 
 body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
+	background: #ffffff; /* Fallback for when there is no custom background color defined. */
 }
 
 blockquote:before,
@@ -26,7 +26,7 @@ q {
 }
 
 hr {
-	background-color: #ccc;
+	background-color: #cccccc;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
@@ -91,33 +91,6 @@ table {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-// clearings 
-.clear:before,
-.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
-	content: "";
-	display: table;
-	table-layout: fixed;
-}
-
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
-	clear: both;
 }
 
 
