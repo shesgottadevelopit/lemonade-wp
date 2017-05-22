@@ -1,12 +1,8 @@
-// widgets
-.widget {
-	margin: 0 0 1.5em;
-}
+// header
+	/*insert header styles*/
 
-/* Make sure select elements fit in widgets. */
-.widget select {
-	max-width: 100%;
-}
+// footer
+	/*insert footer styles*/
 
 // pages and posts
 .sticky {
@@ -19,23 +15,31 @@
 
 .byline,
 .updated:not(.published) {
-	display: none;
+	//display: none;
 }
 
 .single .byline,
 .group-blog .byline {
-	display: inline;
+	//display: inline;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
+.article-content {
 	margin: 1.5em 0 0;
 }
 
-.page-links {
+.page-links { //styling for navigation within multiple pages of the same post
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+// widgets
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
 }
 
 // comments
