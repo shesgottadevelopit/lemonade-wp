@@ -2,6 +2,7 @@
 /**
  * Comments template file
  * @package lemonade
+ * @link https://developer.wordpress.org/reference/functions/comment_form/
  */
 if ( post_password_required() ) {
 	return; // This post is password protected. Enter the password to view comments

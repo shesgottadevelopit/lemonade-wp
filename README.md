@@ -1,5 +1,5 @@
 ## Lemonade Wordpress Starter Theme  
-Based on [Automattic's underscores](http://underscores.me/) starter Theme
+Based on [Automattic's underscores](http://underscores.me/) blank slate starter Theme
 
 
 This is a work in progress!
@@ -9,7 +9,7 @@ Theme Directory Structure
 - `Singular.php` can be used to replace `single.php` and `page.php`, reducing the number of pages used in the theme
 - Partials contain blocks of reusable code that is called into each template file.
 - `Functions.php` includes google fonts enqueue scripts
-- Components include various template pages that can be added to the theme to enhance and build on the minimal original components
+- Template-files include various template pages that can be added to the theme to enhance and build on the minimal original components
 ---
 
 Renaming (instructions snatched from underscores.me)
