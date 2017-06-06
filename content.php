@@ -19,6 +19,9 @@
 			<?php echo get_the_date('l // F j, Y'); ?>
 			<?php echo get_the_tag_list('<span>', '</span></span>', '</span>'); ?>
 			<?php the_category(' | '); ?>|
+			<?php if (is_user_logged_in() ) {
+						echo edit_post_link('Edit this post', '<br><span class="edit-post">', '</span>');
+			} ?>
 		</div>
 		<div><!--featured image -->
 			<a href="<?php the_permalink(); ?>">
